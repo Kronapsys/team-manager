@@ -1,5 +1,6 @@
 import React from 'react';
 import Provider from 'react-redux';
+import Jugadores from './components/Jugadores';
 import store from './store'; 
 
 const App = () => (
@@ -8,7 +9,6 @@ const App = () => (
     <main>
       <h1>team manager</h1>
       <Jugadores />
-      <EquipoSeleccinado />
     </main>
   </Provider>
 );
