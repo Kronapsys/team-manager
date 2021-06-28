@@ -24,6 +24,13 @@ const mapStateToProps = state => ({
     titulares: state.titulares
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+    quitarTitular(jugador) {
+        dispatch({
+            type: "QUITAR_TITULAR",
+            jugador
+        })
+    }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Titulares);
