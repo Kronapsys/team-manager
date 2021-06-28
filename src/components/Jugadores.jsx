@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Jugadores = ({jugadores}) => {
+const Jugadores = ({jugadores}) => (
     <section>
         <h2>Jugadores</h2>
         <div className='contenedor-jugadores'>
@@ -19,10 +19,12 @@ const Jugadores = ({jugadores}) => {
             }
         </div>        
     </section>
-}
+)
 
 const mapStateToProps = state => ({
     jugadores: state.jugadores
-})
+});
+
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Jugadores);
