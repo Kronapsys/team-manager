@@ -127,6 +127,13 @@ const initialState = {
 // Ponemos state = initialState por si acaso al cargar por primera vez la App fuese undefined y nosotros no podemos devolver un valor
 // undefined, así le damos un valor por defecto
 const reducerEntrenador = (state = initialState, action) => {
+    if(action.type === "AGREGAR_TITULAR") {
+        return {
+            ...state,
+            titulares: state.titulares.concat(action.jugador)
+        }
+    }
+
     return state; // devuelve el nuevo estado
 }
 

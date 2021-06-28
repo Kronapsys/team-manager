@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 
 const Suplentes = ({suplentes}) => (
     <section>
-        <h2>Titulares</h2>
+        <h2>Suplentes</h2>
         <div className='suplentes'>
             {
                 suplentes.map(j => (
-                    <article className='suplente'>
+                    <article className='suplente' key={j.id}>
                         <div>
                            <img src={j.foto} alt={j.nombre} />
                            <button>X</button>
