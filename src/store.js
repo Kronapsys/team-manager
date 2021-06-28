@@ -151,6 +151,14 @@ const reducerEntrenador = (state = initialState, action) => {
         }
     }
 
+    if(action.type === "QUITAR_SUPLENTE") {
+        return {
+            ...state,
+            suplentes: state.suplentes.filter(j => j.id !== action.jugador.id),
+            jugadores: state.jugadores.concat(action.jugador)
+        }
+    }
+
     return state; // devuelve el nuevo estado
 }
 
